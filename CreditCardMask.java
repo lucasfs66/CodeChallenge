@@ -5,5 +5,19 @@ Your task is to write a function maskify, which changes all but the last four ch
  */
 
 public class CreditCardMask {
-    
+    public static String maskify(String str) {
+    	if (!(str instanceof String))
+    		throw new UnsupportedOperationException("Unimplemented");
+
+        char[] arrayOfLetters = str.toCharArray();
+        String result = "";
+
+        for(int i = 0; i < arrayOfLetters.length; i++){
+            if(i >= arrayOfLetters.length - 4)
+            	result = result + arrayOfLetters[i];
+            else
+            	result = result + "#";
+        }
+        return result;
+    }
 }
