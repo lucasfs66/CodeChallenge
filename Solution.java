@@ -21,7 +21,11 @@ class Result {
 
     public static int simpleArraySum(List<Integer> ar) {
     // Write your code here
-
+    int result = 0;
+    for(int a = 0; a < ar.size(); a++){
+        result = ar.get(a) + result;
+    }
+        return result;
     }
 
 }
